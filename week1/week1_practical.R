@@ -38,3 +38,13 @@ x["b"]
 x['a']
 x[1]
 
+##Explicit coercion or casting
+
+x <- c(0:6)
+class(x)
+as.numeric(x)
+as.logical(x)
+as.character(x)
+
+##Nonsesical Coercion
+
