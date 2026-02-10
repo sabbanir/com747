@@ -109,25 +109,12 @@ run"), fill=c("red","green"))
 plot(rundata$FirstRun, rundata$SecondRun)
 
 
+##Binomial distributions
+dbinom(10, size=20, prob=0.25)  
 
+pbinom(10, size=20, prob=0.25)
+ppois(6, lambda=7)
+1-ppois(6, lambda=7)
 
-library(ggplot2) 
-p <- ggplot(mtcars, aes(factor(am), mpg)) 
-p + geom_boxplot()
-
-m<- matrix(c(1,2,3,4,5,6),nrow=3, ncol=2)
-m
-dim(3)
-
-df <- data.frame(
-  x = 1:10,
-  y = rnorm(10),
-  color = rep(c("A", "B"), each = 5),
-  group = rep(c("G1", "G2"), 5)
-)
-
-
-ggplot(df, aes(x = x, y = y, color = color, linetype = barplot())) +
-  geom_line(height=1) +
-  theme_minimal()
-
+pexp(5, rate=1/10)
+ppois(6, lambda=7, lower=FALSE)
