@@ -101,6 +101,20 @@ abline(reg1)
 title("Run stats")
 
 
+## Correlation Coeffient
+cor(inputdata$FirstRun, inputdata$SecondRun)
+
+cor.test(inputdata$FirstRun, inputdata$SecondRun)
+
+
+inputdata$runDiff <- inputdata$SecondRun - inputdata$FirstRun
+inputdata
+
+y <- inputdata$FirstRun[inputdata$FirstRun>30]
+length(y)
+
+
+t.test(inputdata$FirstRun, inputdata$SecondRun, PAIRED = TRUE)
 # Simple Bar Plot
 counts <- table(mtcars$gear)
 barplot(counts, main="Car Distribution",
